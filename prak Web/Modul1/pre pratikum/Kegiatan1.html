@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Mahasiswa</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        div{
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        div label{
+            width: 80px;
+        }
+        input{
+            width: 200px;
+        }
+        button{
+            width: fit-content;
+            height:40px;
+        }
+        input[type="submit"]{
+            margin-left: 80px;
+            width: 100px;
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="">
+    <div>
+        <label for="name">Nama : </label>
+        <input type="text" name="name" id="name">
+    </div>
+    <div>
+        <label for="nim">NIM : </label>
+        <input type="number" name="nim" id="nim">
+    </div>
+    <div>
+    <label for="tanggal">Tanggal : </label>
+    <input type="date" name="tanggal" id="tanggal">
+    </div>
+    <div>
+        <label for="alamat">Alamat : </label>
+        <textarea name="alamat" cols="21" rows="5"></textarea>
+    </div>
+    <input type="submit" value="Simpan">
+    </form>
+    
+</body>
+</html>

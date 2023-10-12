@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="CDLB2">
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" id="nama" nama="nama" cols="21" rows="2" />
+        <label for="email">Email</label>
+        <input type="email" id="email" nama="email" cols="21" rows="3" />
+        <label for="alamat">Alamat</label>
+        <textarea id="alamat" nama="alamat" cols="21" rows="5"></textarea>
+        <input type="submit" value="Daftar" id="daftar" />
+      </form>
+      <script>
+        var form = document.getElementById("CDLB2");
+
+        form.addEventListener("submit", function(event) {
+            var namaInput = document.getElementById("nama").value;
+            var emailInput = document.getElementById("email").value;
+            var alamatInput = document.getElementById("alamat").value;
+
+            if (namaInput === "" || emailInput === "" || alamatInput === "") {
+                event.preventDefault(); // Mencegah pengiriman formulir jika ada data yang kosong
+                alert("Anda harus mengisi semua kolom");
+            } else {
+                alert("Pendaftaran berhasil!");
+            }
+        });
+    </script>
+    <style>
+      body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #0073e7;
+            height: 100vh;
+            margin: 0;
+          }
+      
+      #CDLB2 {
+        background-color: white; /* Warna latar belakang formulir */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        padding: 20px;
+        width: 300px;
+        text-align: left;
+      }
+      
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+      
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 95%;
+        padding: 5px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        background-color: #ccc;
+      }
+      
+      textarea {
+        resize: none; /* Menghilangkan fitur resize pada textarea */
+      }
+      
+      #daftar {
+        background-color: #3498db; /* Warna latar belakang tombol biru */
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      #daftar:hover {
+        background-color: #2980b9; /* Warna latar belakang tombol biru saat hover */
+      }
+      </style>
+</body>
+</html>
